@@ -4,14 +4,14 @@ use Twilio\Rest\Client;
   function sendSMS() {
       require_once 'vendor/autoload.php';
 
-      $sid    = "################################"; //add sid from the twilio account
-      $token  = "################################"; //add auth token from the twilio account
+      $sid    = "ACdc8c056e035f75acc3d88cf569c0fcbe";
+      $token  = "bda9a1bba975a72bfe4b89d36ae42146";
       $twilio = new Client($sid, $token);
 
       $message = $twilio->messages
-          ->create("############", // add number to send message to
+          ->create("+12019366409", // to
               array(
-                  "from" => "###########", // add twilio given number
+                  "from" => "+19733557784",
                   "body" => "Hello from Kinnari Jasoliya CS 643 Fall 2018"
               )
           );
@@ -128,8 +128,8 @@ use Twilio\Rest\Client;
                 <div class="row">
                     <div class="col-50">
                         <h3>SMS details</h3>
-                        <label for="to"><i class="fa fa-comments"></i> To : </label>
-                        <label for="from"><i class="fa fa-comments-o"></i> From : </label>
+                        <label for="to"><i class="fa fa-comments"></i> To : +12019366409</label>
+                        <label for="from"><i class="fa fa-comments-o"></i> From : +19733557784</label>
                         <label for="email"><i class="fa fa-list"></i> Body : Hello from Kinnari Jasoliya CS 643 Fall 2018</label>
                     </div>
                 </div>
